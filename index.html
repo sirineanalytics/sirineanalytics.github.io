@@ -761,43 +761,185 @@
     </div>
   </section>
 
-  <!-- ── TESTIMONIALS ── -->
   <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="testimonials__head">
-        <span class="section-label">Client feedback</span>
-        <h2 class="section-title">What clients say</h2>
-      </div>
-      <div class="testimonials__grid">
+  <style>
+    .testimonials {
+      padding: 5rem 0;
+    }
+    .testimonials .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .testimonials__head {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7c6af7;
+      margin-bottom: 0.75rem;
+    }
+    .testimonials .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0f0f0f;
+      margin: 0;
+    }
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    .tcard {
+      background: #ffffff;
+      border: 1px solid #e2e2e2;
+      border-radius: 14px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.25rem;
+      text-decoration: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    a.tcard:hover {
+      border-color: #b8aef5;
+      box-shadow: 0 4px 18px rgba(124, 106, 247, 0.10);
+    }
+    .tcard--wide {
+      grid-column: span 2;
+    }
+    .tcard__quote {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #1a1a1a;
+      margin: 0;
+      font-style: italic;
+    }
+    .tcard__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .tcard__author {
+      font-size: 13px;
+      font-weight: 600;
+      color: #3d3d3d;
+      letter-spacing: 0.01em;
+    }
+    .tcard__link-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .tcard__link-badge--linkedin {
+      background: #e8f0fe;
+      color: #1a4fa0;
+      border: 1px solid #b3cdf7;
+    }
+    .tcard__link-badge--upwork {
+      background: #e6f5ec;
+      color: #14681f;
+      border: 1px solid #9dd4a8;
+    }
+    .tcard__link-badge svg {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+    @media (max-width: 640px) {
+      .testimonials__grid {
+        grid-template-columns: 1fr;
+      }
+      .tcard--wide {
+        grid-column: span 1;
+      }
+    }
+  </style>
 
-        <div class="tcard tcard--wide">
-          <p class="tcard__quote">Sirine joined our team for a media-mix-modeling project and quickly demonstrated she grasped both the statistical nuances and the business stakes — so we expanded her role to cover the wider marketing analytics stack. She overhauled our data pipelines and reporting infrastructure, giving leadership near-real-time clarity on spend, ROI, and performance trends. Having already navigated the measurement challenges of optimising an eight-figure budget, Sirine brings the foresight and technical depth that scaling brands need.</p>
-          <span class="tcard__author">Ben P. — CEO, Caba Design</span>
-        </div>
-
-        <div class="tcard">
-          <p class="tcard__quote">Sirine is very competent, thoughtful, takes feedback well, and communicates promptly. I would definitely work with her again. Highly recommend.</p>
-          <span class="tcard__author">Drayton D. — Manager, Tower Hills Capital</span>
-        </div>
-
-        <div class="tcard">
-          <p class="tcard__quote">She brought a level of enthusiasm and expertise to our marketing mix modeling project that was truly impressive. Always on time, organized, and delivering high-quality work.</p>
-          <span class="tcard__author">Fadoua H. — Data Analyst, Access International</span>
-        </div>
-
-        <div class="tcard">
-          <p class="tcard__quote">Sirine delivered strong work on our MMM modeling and collaborated effectively with the team across both the analytics and attribution workstreams.</p>
-          <span class="tcard__author">Anonymous — Upwork client</span>
-        </div>
-
-        <div class="tcard">
-          <p class="tcard__quote">I recommend Sirine for any role that draws on her skills in marketing analytics. She was a remarkable contributor and a pleasure to work with.</p>
-          <span class="tcard__author">Yasmine O. — Co-Founder, M1Marketing</span>
-        </div>
-
-      </div>
+  <div class="container">
+    <div class="testimonials__head">
+      <span class="section-label">Client feedback</span>
+      <h2 class="section-title">What clients say</h2>
     </div>
-  </section>
+    <div class="testimonials__grid">
+
+      <!-- Wide card — LinkedIn -->
+      <a class="tcard tcard--wide" href="https://www.linkedin.com/in/sirine-benmansour/details/recommendations" target="_blank" rel="noopener noreferrer">
+        <p class="tcard__quote">Sirine joined our team for a media-mix-modeling project and quickly demonstrated she grasped both the statistical nuances and the business stakes — so we expanded her role to cover the wider marketing analytics stack. She overhauled our data pipelines and reporting infrastructure, giving leadership near-real-time clarity on spend, ROI, and performance trends. Having already navigated the measurement challenges of optimising an eight-figure budget, Sirine brings the foresight and technical depth that scaling brands need.</p>
+        <div class="tcard__footer">
+          <span class="tcard__author">Ben P. — CEO, Caba Design</span>
+          <span class="tcard__link-badge tcard__link-badge--linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 2 — LinkedIn -->
+      <a class="tcard" href="https://www.linkedin.com/in/sirine-benmansour/details/recommendations" target="_blank" rel="noopener noreferrer">
+        <p class="tcard__quote">Sirine is very competent, thoughtful, takes feedback well, and communicates promptly. I would definitely work with her again. Highly recommend.</p>
+        <div class="tcard__footer">
+          <span class="tcard__author">Drayton D. — Manager, Tower Hills Capital</span>
+          <span class="tcard__link-badge tcard__link-badge--linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 3 — LinkedIn -->
+      <a class="tcard" href="https://www.linkedin.com/in/sirine-benmansour/details/recommendations" target="_blank" rel="noopener noreferrer">
+        <p class="tcard__quote">She brought a level of enthusiasm and expertise to our marketing mix modeling project that was truly impressive. Always on time, organized, and delivering high-quality work.</p>
+        <div class="tcard__footer">
+          <span class="tcard__author">Fadoua H. — Data Analyst, Access International</span>
+          <span class="tcard__link-badge tcard__link-badge--linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 4 — Upwork (anonymous) -->
+      <a class="tcard" href="https://upwork.com/freelancers/serenab7" target="_blank" rel="noopener noreferrer">
+        <p class="tcard__quote">Sirine delivered strong work on our MMM modeling and collaborated effectively with the team across both the analytics and attribution workstreams.</p>
+        <div class="tcard__footer">
+          <span class="tcard__author">Anonymous — Upwork client</span>
+          <span class="tcard__link-badge tcard__link-badge--upwork">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H8.controls v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H1.172v7.112c0 2.574 2.097 4.661 4.675 4.661s4.675-2.087 4.675-4.661v-1.192c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.212l1.212-5.71c1.rest 1.065 2.444 1.79 3.997 1.79 2.965 0 5.374-2.409 5.374-5.374 0-2.967-2.409-5.376-5.057-5.376z"/></svg>
+            Upwork
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 5 — LinkedIn -->
+      <a class="tcard" href="https://www.linkedin.com/in/sirine-benmansour/details/recommendations" target="_blank" rel="noopener noreferrer">
+        <p class="tcard__quote">I recommend Sirine for any role that draws on her skills in marketing analytics. She was a remarkable contributor and a pleasure to work with.</p>
+        <div class="tcard__footer">
+          <span class="tcard__author">Yasmine O. — Co-Founder, M1Marketing</span>
+          <span class="tcard__link-badge tcard__link-badge--linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
 
   <!-- ── PROCESS ── -->
   <section class="process" id="process">
